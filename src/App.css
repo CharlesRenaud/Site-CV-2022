@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+.image-ronde-bg{
+  background-size : contain;
+  background-position : 50% 50%; 
+  background-image : url(./moi.png);
+  display : inline-block;
+  width : 250px; height : 250px;
+  border: none;
+  -moz-border-radius : 150px;
+  -webkit-border-radius : 150px;
+  border-radius : 150px;
+}
