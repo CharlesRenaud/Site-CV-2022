@@ -1,51 +1,86 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin : 0;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 .image-ronde-bg{
   background-size : contain;
   background-position : 50% 50%; 
-  background-image : url(./moi.png);
+  background-image : url(./images/moi.png);
   display : inline-block;
   width : 250px; height : 250px;
   border: none;
   -moz-border-radius : 150px;
   -webkit-border-radius : 150px;
   border-radius : 150px;
+}
+
+
+/* Circle Skills Color */
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: rgb(95, 202, 95) !important;
+}
+
+.skills-container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80vh;
+
+}
+.skill-box{
+  display:flex;
+  width: 100%;
+  height: 80vh;
+}
+
+.skill-card{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-name{
+  text-align: center;
+  margin-top:1.5rem;
+  letter-spacing: 0.1rem;
+  font-size:1.2rem;
+}
+.skill-image{
+  max-width: 8rem;
+  width:5rem;
+  margin-top:1.5rem;
+
+}
+
+.CircularProgressbar{
+  display:flex;
+  width: 10rem !important;
+  max-width: 10rem !important;
+  min-width: 3rem !important;
+}
+.CircularProgressbar-text{
+  fill: lightgreen !important;
+  font-weight: bold !important;
+}
+
+#morbid {
+  width: auto;
+  max-width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: max-width 1s ;
 }
