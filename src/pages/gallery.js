@@ -21,49 +21,59 @@ const GalleryVue = () => {
         [
             {
             "image" : gallery1,
-            'texte' : "React + Firebase, Functional Programming, Music WebApp."
+            'texte' : "React + Firebase, Functional Programming, Music WebApp.",
+            "id" : 1,
             },
             {
             "image" : gallery2,
-            'texte' : "Wordpress, Woocommerce, OVH. Projet CBD, en cours."
+            'texte' : "Wordpress, Woocommerce, OVH. Projet CBD, en cours.",
+            "id" : 2,
             },
              {
             "image" : gallery4,
-            'texte' : "Wordpress, Woocommerce, OVH. Projet CBD, en pause."
+            'texte' : "Wordpress, Woocommerce, OVH. Projet CBD, en pause.",
+            "id" : 3,
             },
             {
             "image" : gallery3,
-            'texte' : "React, Redux, Axios, Symfony, Aws. Projet de fin de formation."
+            'texte' : "React, Redux, Axios, Symfony, Aws. Projet de fin de formation.",
+            "id" : 4,
             },
             {
             "image" : gallery5,
-            'texte' : "Wordpress, Avada, Woocomerce. Site associatif réaliser en collaboration avec ma soeur."
+            'texte' : "Wordpress, Avada, Woocomerce. Site associatif réaliser en collaboration avec ma soeur.",
+            "id" : 5,
             },
             {
             "image" : gallery6,
-            'texte' : "React, ApiMockup. Test de design site pro' pour tatoueur"
+            'texte' : "React, ApiMockup. Test de design site pro' pour tatoueur",
+            "id" : 6,
             },
             {
             "image" : gallery7,
-            'texte' : "React, ApiMockup. Test de design site pro' pour tatoueur"
+            'texte' : "React, ApiMockup. Test de design site pro' pour tatoueur",
+            "id" : 7,
             },
             {
             "image" : gallery8,
-            'texte' : "WebApp Next.js Pour un jeux steam indépendant. (Version Mobile) "
+            'texte' : "WebApp Next.js Pour un jeux steam indépendant. (Version Mobile), [in progress]",
+            "id" : 8,
             },
             {
             "image" : gallery9,
-            'texte' : "WebApp Next.js Pour un jeux steam indépendant. (Version Mobile) "
+            'texte' : "WebApp Next.js Pour un jeux steam indépendant. (Version Mobile), [in progress] ",
+            "id" : 9,
             },
             {
             "image" : gallery10,
-            'texte' : "WebApp React + Api Node.js. Une application qui me permet de lire des mangas."
+            'texte' : "WebApp React + Api Node.js. Une application qui me permet de lire des mangas.",
+            "id" : 10,
             },
             {
             "image" : gallery11,
-            'texte' : "WebApp React + Api Node.js. Une application qui me permet de lire des mangas."
+            'texte' : "WebApp React + Api Node.js. Une application qui me permet de lire des mangas.",
+            "id" : 11,
             },
-           
         ]    
 
 
@@ -71,6 +81,7 @@ const GalleryVue = () => {
         <AwesomeSlider>
                 {galleryArray.map(gallery =>
                 <div className="slider-awesome">
+                    <p className="slider-number">{gallery.id} / {galleryArray.length}</p>
                     <img className="image-awesome" alt='gallery' src={gallery.image}/>
                     <div className="box-description-gallery">
                         <p className="description-gallery">{gallery.texte}</p>    

@@ -3,13 +3,13 @@
     height: 100%;
     padding: 0%;
     margin: 0%;
-
+    
 
 }
 
 .image-awesome{
     width: 100%;
-    display: block;
+  
 }
 
 .awssld{
@@ -28,4 +28,23 @@
 }
 .box-description-gallery{
     color:white;
+}
+.slider-number{
+    position: absolute;
+    bottom:2%;
+    right:5%;
+    color: white;
+    font-weight:bold;
+    font-size: 1.2rem;
+    z-index: 999999999;
+}
+
+@media screen and (max-width: 1500px) {
+    .image-awesome{
+        height:93vh;
+    }
+    .box-description-gallery{
+        height:7vh;
+        
+    }
 }

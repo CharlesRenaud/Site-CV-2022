@@ -98,7 +98,6 @@
     align-self: center;
     margin-bottom: 1rem;
     color: rgb(123, 50, 218);
-  
   }
   .study-link{
     display: flex;
@@ -162,4 +161,33 @@
   @keyframes typewriters3{
     from{width: 0;}
     to{width: 100%}
+  }
+
+  @media screen and (max-width: 1500px) {
+   .profil-card{
+     width: 50%;
+     margin-top: 2rem;
+   }
+   .card-list{
+     line-height: 1.5rem;
+   }
+   .diplome-box{
+    display: flex;
+    width: 80%;
+    height:30vh;  justify-content: space-between;
+    margin-top: 4rem;
+    position: relative;
+    animation : fromBottom 2s;
+    margin-top: 2rem;;
+  }
+  .diplome-card{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 35%;
+  }
+  .diplome-card > p {
+    margin-top:1rem;
+    text-align: center;
+  }
   }
