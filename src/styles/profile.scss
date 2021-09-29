@@ -1,0 +1,165 @@
+.profil-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .box-image {
+    position: relative;
+    border: 8px solid black;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+  }
+  .description{
+    display: block;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    align-self: center;
+    font-size:1.2rem !important;
+    text-align: center;
+    padding-left: 0;
+    
+  }
+    
+  .anim-typewriters3{
+    animation: typewriters3 3s steps(44) 1s 1 normal both;
+  }
+  
+  .description-box{
+    display:flex;
+    justify-content: center;
+    height: auto;
+    margin-top:4rem;
+    color: black;
+  }
+  
+  
+  .profil-card{
+    border-right:3px solid black;
+    border-bottom:2px solid black;
+    margin-top:4rem;
+    padding: 1rem;
+    display: flex;
+    width: 35%;
+    animation: fromLeft 2s ;
+    position: relative;
+  }
+  
+  
+  .card-list{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5rem;
+    justify-content: space-around;
+    height: 80%;
+    align-self: center;
+  }
+  
+   .card-list> p {
+    display: flex;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+  .card-list p > a{
+    color: rgb(123, 50, 218);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+  }
+  .card-list p > a:hover{
+    border-bottom: 1px solid black;
+  }
+    
+  .diplome-box{
+    display: flex;
+    width: 80%;
+    height:30vh;  justify-content: space-between;
+    margin-top: 4rem;
+    position: relative;
+    animation : fromBottom 2s;
+    margin-top: 2rem;;
+  }
+  .diplome-card{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 25%;
+  }
+  .diplome-card > p {
+    font-weight: bold;
+    margin-top:2rem;
+    align-self: center;
+    margin-bottom: 1rem;
+    color: rgb(123, 50, 218);
+  
+  }
+  .study-link{
+    display: flex;
+    align-self: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    font-size:1.05rem
+  }
+  .study-link:hover{
+    color: rgb(123, 50, 218);
+  }
+  
+  .diplome{
+    display: flex;
+    width:7rem;
+    align-self: center;
+  }
+  .date{
+    font-weight: bold;
+    font-size:1.1rem;
+    padding-bottom:1rem;
+    color: black !important;
+  }
+
+  .cv{
+    border:1px solid black;
+    text-align: center ;
+    padding:1rem;
+    margin-top:3rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    animation : fromBottom 2s;
+    position: relative;
+
+}
+.cv:hover{
+    background-color: grey;
+    color:lightgrey;
+    border:1px solid grey;
+}
+
+.dash{
+    font-size: 5rem;
+    text-align: center;
+}
+
+  
+
+  /* @MediaQueries */
+    
+  @keyframes fromBottom{
+    from{left: -100%}
+    to{left: 0%}
+  }
+  @keyframes fromLeft{
+    from{right: -100%}
+    to{right: 0%}
+  }
+  @keyframes typewriters3{
+    from{width: 0;}
+    to{width: 100%}
+  }
