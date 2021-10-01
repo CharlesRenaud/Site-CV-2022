@@ -191,3 +191,128 @@
     text-align: center;
   }
   }
+
+  .profile-box{
+    display: flex;
+    border:1px solid red;
+    height:100vh;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-card{
+    position: relative;
+    display: flex;
+    width: 70%;
+    height:60vh;
+    border:1px solid green;
+    flex-direction: column;
+  }
+ 
+  .profile-image{
+    width:40%;
+    height:100%;
+    display: flex;
+      position: relative;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background-position: top;
+      background-size: cover;
+    
+
+  }
+  .profile-texte{
+    width:60%;
+    display: flex;
+    align-self: center;
+    margin-left: 5rem;
+    font-size:1.5rem;
+    letter-spacing: 0.1rem;
+
+  }
+  .profile-top{
+    display: flex;
+    width:100%;
+    height:50%;
+    border:1px solid green;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-bottom{
+    width:100%;
+    height:50%;
+    border:1px solid purple;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .profile-accroche{
+    display: flex;
+    border:1px solid red;
+    font-size:1.6rem;
+    padding-left: 3rem;
+
+
+  }
+  .profile-diplomes{
+    position : absolute;
+    border:1px solid red;
+    width: 30%;
+    height:100vh;
+    background-color: grey;
+    right: -30%;
+  }
+  .diplomes-btn{
+
+  }
+  .profile-diplomes-open{
+    animation : profileDiplomeLeft 1s;
+    right: 0%;
+  }
+  .profile-card-open{
+    animation : profileCardLeft 1s;
+  }
+
+  @keyframes profileDiplomeLeft{
+    from{right: -30%;}
+    to{right: 0%;}
+  }
+
+  @keyframes profileCardLeft{
+    from{left: 0;}
+    to{left: -30%;}
+  }
+
+
+  .fade-in-image {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }

@@ -5,6 +5,7 @@ import Profile from './pages/profile';
 import Header from './pages/header';
 import SliderGenerator from "./components/SliderGenerator";
 import GalleryVue from "./pages/gallery";
+import Profile2 from "./pages/profile2"
 const Fullpage = () => {
  
     /* Clique detector Slider */
@@ -38,11 +39,14 @@ return (
       //fullpage options
       scrollOverflow={true}
       scrollingSpeed = {1000} /* Options here */
-      sectionsColor={["lightgrey", "#687477",'#E2C2B3']}
+      sectionsColor={["white","lightgrey", "#687477",'#E2C2B3']}
       render={({ state, fullpageApi }) => {
 
         return (
         <ReactFullpage.Wrapper >
+          <div className="section">
+              <Profile2 />
+          </div>
           <div className="section">
               <Profile />
           </div>
