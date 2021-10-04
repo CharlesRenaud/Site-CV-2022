@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 .profil-container{
     display: flex;
     width: 100%;
@@ -25,10 +27,6 @@
     text-align: center;
     padding-left: 0;
     
-  }
-    
-  .anim-typewriters3{
-    animation: typewriters3 3s steps(44) 1s 1 normal both;
   }
   
   .description-box{
@@ -84,7 +82,7 @@
     margin-top: 4rem;
     position: relative;
     animation : fromBottom 2s;
-    margin-top: 2rem;;
+    margin-top: 2rem;   
   }
   .diplome-card{
     display: flex;
@@ -189,23 +187,22 @@
   .diplome-card > p {
     margin-top:1rem;
     text-align: center;
-  }
+
+    }
   }
 
   .profile-box{
     display: flex;
-    border:1px solid red;
     height:100vh;
     width:100%;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
   .profile-card{
     position: relative;
     display: flex;
     width: 70%;
     height:60vh;
-    border:1px solid green;
     flex-direction: column;
   }
  
@@ -222,56 +219,234 @@
     
 
   }
-  .profile-texte{
-    width:60%;
-    display: flex;
-    align-self: center;
-    margin-left: 5rem;
-    font-size:1.5rem;
-    letter-spacing: 0.1rem;
-
+ 
+  .logo-react{
+    width:3.5rem;
   }
-  .profile-top{
-    display: flex;
-    width:100%;
-    height:50%;
-    border:1px solid green;
-    justify-content: center;
-    align-items: center;
-  }
+ 
   .profile-bottom{
     width:100%;
     height:50%;
-    border:1px solid purple;
     display:flex;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
   }
   .profile-accroche{
     display: flex;
-    border:1px solid red;
-    font-size:1.6rem;
+    font-size:1.5rem;
     padding-left: 3rem;
-
-
+    display: flex;
+    margin-top:1rem;
+  }
+  .link{
+    font-size: 1rem;
+    a{
+      text-decoration: none;
+      color:#18c7f8;
+    }
+    a:hover{
+      color: #61DAFB;
+    }
   }
   .profile-diplomes{
     position : absolute;
-    border:1px solid red;
     width: 30%;
     height:100vh;
-    background-color: grey;
+    background-color: #18c7f8;
     right: -30%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    color:black(235, 235, 235);
+    -webkit-box-shadow: -6px 0px 15px -9px #000000; 
+    box-shadow: -6px 0px 15px -9px #000000;
   }
-  .diplomes-btn{
 
-  }
+  
   .profile-diplomes-open{
     animation : profileDiplomeLeft 1s;
     right: 0%;
   }
   .profile-card-open{
     animation : profileCardLeft 1s;
+    left: -12%;
+  }
+  .profile-diplomes-close{
+    animation : profileDiplomeLeftClose 1s;
+    right: -30%;
+  }
+  .profile-card-close{
+    animation : profileCardLeftClose 1s;
+    left: 0%;
+  }
+
+  .study-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+  }
+  .study-title{
+    font-weight: bold;
+    margin-bottom:0.2rem;
+
+  }
+  .study-date{
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+
+  }
+  .study-ecole{
+    color: white;
+  }
+  .study-barre{
+    width:60%;
+    height: 2px;
+    margin-top: 0.7rem;
+    background-color: white;
+  }
+.study-box-title{
+  position: absolute;
+  top:3%;
+  left:3%;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+
+}
+.study-image{
+  width: 15%;
+  }
+
+  .example{
+    position: absolute;
+    top:0%;
+    left:0%;
+  }
+
+ .profile-cv{
+   display: flex;
+   align-self: center;
+   padding:1rem;
+   margin-top:3rem;
+   background-color:#18c7f8;
+   color: white;
+ }
+ .profile-cv:hover{
+   background-color:#61DAFB;
+   color: white;
+   cursor:pointer;
+ } 
+
+ .arrow {
+  border-color:transparent;
+  border-style:solid;
+  border-width:0 2em;
+  display:block;
+  height:0;
+  margin:10em auto;
+  opacity:0.4;
+  text-indent:-9999px;
+  transform-origin: 50% 50%;
+  width:0;
+}
+.box{
+  transform: rotate(90deg);
+  position: absolute;
+  top:60%;
+  right:0%;
+  cursor: pointer;
+  width: 10px;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.box-open{
+  transform: rotate(-90deg) !important;
+  right:10%;
+  animation: boxToLeft 0.5s;
+}
+.box-close{
+  transform: rotate(90deg) !important;
+  animation: boxToRight 0.5s;
+}
+
+.up {
+  -webkit-animation: uparrow 0.6s infinite alternate ease-in-out;
+  border-top:2em solid #00b6f1;
+}
+
+.profile-texte{
+  display: flex;
+  align-self: flex-start;
+  font-size:1.5rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Source Code Pro', monospace;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #18c7f8;
+  font-weight: bold;
+
+}
+
+.profile-top{
+  display: flex;
+  width:100%;
+  height:50%;
+  justify-content: center;
+  align-items: center;
+}
+.profile-top-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:50%;
+  height:auto;
+  margin-left: 2rem;
+}
+
+.profile-social{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.social-img{
+  margin-top:0.5rem;
+  padding:0.2rem;
+  width: 7%;
+  height: auto;
+}
+.social-img:hover{
+  cursor: pointer;
+}
+
+
+
+@keyframes boxToLeft{
+  from{right: 0%;}
+  to{right: 10%;}
+} 
+@keyframes boxToRight{
+  from{right: 10%;}
+  to{right: 0%;}
+}
+@keyframes uparrow {
+  0% { -webkit-transform: translateY(0); opacity: 0.4 }
+  100% { -webkit-transform: translateY(-0.4em); opacity: 0.9 }
+}
+  @keyframes profileDiplomeLeftClose{
+    from{right: 0%;}
+    to{right: -30%;}
+  }
+
+  @keyframes profileCardLeftClose{
+    from{left: -10%;}
+    to{left: 0%;}
   }
 
   @keyframes profileDiplomeLeft{
@@ -281,7 +456,7 @@
 
   @keyframes profileCardLeft{
     from{left: 0;}
-    to{left: -30%;}
+    to{left: -12%;}
   }
 
 

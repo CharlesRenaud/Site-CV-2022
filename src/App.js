@@ -39,16 +39,13 @@ return (
       //fullpage options
       scrollOverflow={true}
       scrollingSpeed = {1000} /* Options here */
-      sectionsColor={["white","lightgrey", "#687477",'#E2C2B3']}
+      sectionsColor={["rgb(235, 235, 235)","#687477", "#687477",'#E2C2B3']}
       render={({ state, fullpageApi }) => {
 
         return (
         <ReactFullpage.Wrapper >
           <div className="section">
               <Profile2 />
-          </div>
-          <div className="section">
-              <Profile />
           </div>
           <div className="section">
               <SliderGenerator props={toogler} />
