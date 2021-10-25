@@ -45,10 +45,10 @@ return (
         return (
         <ReactFullpage.Wrapper >
           <div className="section">
-              <Profile2 />
+              <Profile2 {...fullpageApi} />
           </div>
           <div className="section">
-              <SliderGenerator props={toogler} />
+              <SliderGenerator {...fullpageApi} props={toogler} />
           </div>
           <div className="section">
             <GalleryVue />

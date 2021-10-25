@@ -82,7 +82,7 @@
     margin-top: 4rem;
     position: relative;
     animation : fromBottom 2s;
-    margin-top: 2rem;   
+    margin-top: 2rem; 
   }
   .diplome-card{
     display: flex;
@@ -132,6 +132,9 @@
     animation : fromBottom 2s;
     position: relative;
 
+}
+.profile-diplomes{
+  z-index: 99999999999999999999;
 }
 .cv:hover{
     background-color: grey;
@@ -427,6 +430,7 @@
 
 
 
+
 @keyframes boxToLeft{
   from{right: 0%;}
   to{right: 10%;}
@@ -491,3 +495,169 @@
     0% {opacity:0;}
     100% {opacity:1;}
   }
+  @media screen and (max-width: 1500px) {
+    .profile-accroche{
+      font-size: 1.1rem;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+  
+    .profile-box{
+      height: auto;
+      display: flex;
+      align-items: start;
+      justify-self: start;
+      
+    }
+    .profile-card{
+      display: flex !important;
+      flex-direction: column !important;
+      height: 90vh !important;
+      padding: 0;
+      width: 90%;
+      box-sizing: border-box !important;
+      justify-content: start !important;
+
+    }
+    .profile-image{
+      width:10rem;
+      height:10rem;
+        }
+    .profile-top{
+      flex-direction: column;
+    }
+    .profile-top-1{
+      display:flex;
+      margin:0;
+      width: 100%;
+    }
+    .diplomes-btn-right  {
+      cursor: pointer !important; 
+      position:absolute !important;
+      z-index:999999 !important;
+      margin:0 !important;
+    }
+
+    .arrow {
+    }
+    .box{
+      transform: rotate(90deg);
+      position: absolute;
+      top:60%;
+      right:2%;
+      cursor: pointer;
+      width: 10px;
+      height: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    .box-open{
+      transform: rotate(-90deg) !important;
+      right:95%;
+      animation: boxToLefts 0.5s;
+    }
+    .box-close{
+      transform: rotate(90deg) !important;
+      animation: boxToRights 1s;
+    }
+    .profile-diplomes{
+      width:80%;
+      right: -80%;
+      position : absolute !important;
+      top:0;
+    }
+
+    .profile-diplomes-open{
+      animation : profileDiplomeLefts 1s;
+      right: 0%;
+    }
+    .profile-card-open{
+      animation : profileCardLefts 1s;
+      left: 0%;
+    }
+    .profile-diplomes-close{
+      animation : profileDiplomeLeftCloses 1s;
+      right: -80%;
+    }
+    .profile-card-close{
+      animation : profileCardLeftCloses 1s;
+      left: 0%;
+    }
+
+    @keyframes boxToLefts{
+      from{right: 0%;}
+      to{right: 95%;}
+    } 
+    @keyframes boxToRights{
+      from{right: 95%;}
+      to{right: 0%;}
+    }
+    @keyframes uparrow {
+      0% { -webkit-transform: translateY(0); opacity: 0.4 }
+      100% { -webkit-transform: translateY(-0.4em); opacity: 0.9 }
+    }
+      @keyframes profileDiplomeLeftCloses{
+        from{right: 0%;}
+        to{right: -80%;}
+      }
+    
+      @keyframes profileCardLeftCloses{
+        from{left: 0%;}
+        to{left: 0%;}
+      }
+    
+      @keyframes profileDiplomeLefts{
+        from{right: -80%;}
+        to{right: 0%;}
+      }
+    
+      @keyframes profileCardLefts{
+        from{left: 0;}
+        to{left: 0%;}
+      }
+      .profile-cv{
+        margin-bottom:5rem;
+        margin-top: 2rem;
+      }
+
+      .profile-diplomes{
+        font-size: 0.9rem;
+        justify-content: center;
+      }
+      .profile-bottom{
+        justify-content: start;
+      }
+      .study-box-title{
+        font-size:1.4rem
+      }
+      .study-title{
+        text-align: center;
+      }
+      .profile-bottom p{
+        padding:0;
+        margin-right:11%;
+        font-size: 1.4rem;
+      }
+      .profile-accroche > a {
+        font-size: 0.9rem;
+      }
+      .diplomes-btn{
+        cursor: pointer !important; 
+        position:absolute !important;
+        bottom:0% !important;
+        left:42% !important;
+        z-index:999999 !important;
+        margin:0 !important;
+      }
+      .profile-accroche{
+        font-size:1.2rem !important;
+      }
+      .profile-texte{
+        font-size:1rem;
+      }
+
+  }
+

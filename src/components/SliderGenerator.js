@@ -12,12 +12,13 @@ import mongodb from "../images/mongodb.png";
 import mysql from "../images/mysql2.png";
 import react from "../images/react.png";
 import serveur from "../images/serveur2.png";
-import webpack from "../images/webpack4.png";
+import webpack from "../images/nextjs2.png";
 import wordpress from "../images/wordpress2.png";
 import php from "../images/php.png";
 import node from "../images/nodejs2.png"
 import certif from '../images/certif.png'
 
+import Particles from 'react-particles-js';
 
 
 
@@ -34,7 +35,7 @@ const slide = [
       'image' : react
       },
       {
-      "name" : "Webpack",
+      "name" : "NextJS",
       "value" : 60,
       'image' : webpack
   
@@ -111,11 +112,12 @@ const slide = [
     }}
 
 
-const SliderGenerator = (props) => {
+const SliderGenerator = (fullpageApi ,props) => {
 
 
     return (
-      <div>
+      <div className="slider-box">
+         
         {slide.map(slider =>  
           <div className="slide">
             <div className="skill-container">
@@ -136,13 +138,74 @@ const SliderGenerator = (props) => {
                       }}
                     </VisibilitySensor>
                     <p className="skill-name">{stat.name}</p>
-                    <img className="skill-image" src={stat.image} />
+                    <div  className="skill-image"  style={{backgroundImage: 'url("'+ stat.image +'")'} }>
+                    </div>
                   </div>  
                  )}
               </div>
             </div>  
           </div>
+
         )}
+        <Particles canvasClassName="example"
+                params={{
+                    "particles": {
+                        "number": {
+                            "value": 160,
+                            "density": {
+                                "enable": false
+                            }
+                        },
+                        "color": {
+                        "value": "#61DAFB"
+                        },
+                    
+                        
+                        "size": {
+                            "value": 4,
+                            "random": true,
+                            "anim": {
+                                "speed": 4,
+                                "size_min": 0.3
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false
+                        },
+                        "move": {
+                            "random": true,
+                            "speed": 1,
+                            "direction": "top",
+                            "out_mode": "out"
+                        }
+                    },
+                    "interactivity": {
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "bubble"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "repulse"
+                            }
+                        },
+                        "modes": {
+                            "bubble": {
+                                "distance": 250,
+                                "duration": 2,
+                                "size": 0,
+                                "opacity": 0,
+                            },
+                            "repulse": {
+                                "distance": 400,
+                                "duration": 4
+                            }
+                        }
+                    }
+                }} 
+            />
+            <div onClick={() => fullpageApi.moveSectionDown()} className="diplomes-btn arrow up">HOLLLA</div>
       </div>
     )
 };

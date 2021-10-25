@@ -8,7 +8,9 @@ import Github from "../images/github.png";
 import Linkedin from "../images/linkedin.png";
 
 import LogoReact from "../logo.svg";
-const Profile2 = () => {
+import ReactFullpage,{moveSectionDown} from '@fullpage/react-fullpage';
+
+const Profile2 = (fullpageApi) => {
 
     const diplomeArray = 
     [
@@ -16,19 +18,24 @@ const Profile2 = () => {
         "image" : diplome,
         'title' : "BTS Communication (BAC+2)",
         "date" : "- 2019 -",
-        "ecole" : "l'isme"
+        "ecole" : "l'isme",
+        "link" : "https://www.isme.fr/"
         },
         {
         "image" : diplome2,
         'title' : "Formation pro' Développeur Web (BAC+2)",
         "date" : "- 2020 -",
-        "ecole" : "o'clock"
+        "ecole" : "o'clock",
+        "link" : "https://oclock.io/"
+
         },
         {
         "image" : diplome3,
         'title' : "Alternance, Développeur d'applications (BAC+3)",
-        "date" : "11 octobre 2021",
-        "ecole" : "o'clock"
+        "date" : "Début 2022",
+        "ecole" : "o'clock",
+        "link" : "https://oclock.io/"
+
         },
     ]
 
@@ -122,8 +129,8 @@ const Profile2 = () => {
                     <p className="profile-texte">Charles - Développeur Web Junior <img className="logo-react" src={LogoReact}/></p>
                    
                         <div className="profile-social">
-                            <img className="social-img" src={Github} alt="github" />
-                            <img className="social-img" src={Linkedin} alt="github" />
+                            <a href="https://github.com/CharlesRenaud" target="_blank"><img className="social-img" src={Github} alt="github" /></a>
+                            <a href="https://www.linkedin.com/in/charles-renaud-10/" ><img className="social-img" src={Linkedin} alt="github" /></a>
                         </div>
                     </div>
 
@@ -132,12 +139,13 @@ const Profile2 = () => {
                    
                 <div className="profile-bottom">
                     <p className="profile-accroche">Actuellement à la recherche d'une entreprise, afin de réaliser une alternance de 16 mois.</p>
-                    <p className="profile-accroche link"><a href="#">PDF - programme de l'alternance [Développeur d'apllications] BAC+3</a></p>
+                    <p className="profile-accroche link"><a href="#">PDF - programme de l'alternance [Développeur d'applications] BAC+3</a></p>
                     <div className="profile-cv">Télécharger mon CV</div>
                     <div className={boxToogle + " box"}>
-                        <div onClick={() => toogling()} className=" diplomes-btn arrow up"></div>
+                        <div onClick={() => toogling()} className=" diplomes-btn-right  arrow up"></div>
                     </div>
                 </div>
+                <div onClick={() => fullpageApi.moveSectionDown()} style={{cursor:'pointer'}} className="diplomes-btn arrow up"></div>
             </div>
             <div className={tooglerDiplomes + " profile-diplomes "}>
                 <h1 className="study-box-title">Diplômes :</h1>
@@ -146,7 +154,7 @@ const Profile2 = () => {
                     <p className="study-date">{diplome.date}</p>
                     <img className="study-image" src={diplome.image} />
                     <p className="study-title">{diplome.title} </p>
-                    <p className="study-ecole">{diplome.ecole} </p>
+                    <p className="study-ecole"><a style={{color:"white", letterSpacing:"0.1rem"}} target="_blank" href={diplome.link}> {diplome.ecole}</a> </p>
                     <span className="study-barre"></span>
                 </div>
                  )}

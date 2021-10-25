@@ -3,13 +3,52 @@
     height: 100%;
     padding: 0%;
     margin: 0%;
-    
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
 
 }
 
+.link-hover{
+    width: 80%;
+    height: 80%;
+    display: none;
+    align-self: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.315);
+    color:white;
+    font-size:3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-awesome:hover .link-hover{
+    display:flex;
+}
+.link-hover > a {
+    color: black;
+    padding: 1rem;
+    color:white;
+
+}
+.link-hover > a:hover {
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+
+}
+
+
+
 .image-awesome{
-    width: 100%;
-  
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    align-self: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .awssld{
@@ -39,12 +78,53 @@
     z-index: 999999999;
 }
 
-@media screen and (max-width: 1500px) {
-    .image-awesome{
-        height:93vh;
-    }
-    .box-description-gallery{
-        height:7vh;
-        
-    }
+@media screen and (max-width: 800px) {
+    
+.image-awesome{
+    display:none
 }
+.slider-awesome{
+    height: 90vh !important;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+ 
+}
+.slider-awesome:hover .link-hover{
+    height:30%;
+    display:none;
+}
+.image-awesome-mobile{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    background-size: contain;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    margin-bottom: 1rem;
+
+}
+.box-description-gallery{
+    font-size:0.9rem;
+    padding:1rem;
+    bottom:0%;
+    position: relative;
+    bottom:0vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+.nbr{
+    padding-top:0.4rem
+}
+
+
+}
+
+
