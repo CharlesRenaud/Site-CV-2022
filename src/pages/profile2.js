@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import moi from "../images/moi2.jpg";
+import moi from "../images/moi.png";
 import diplome from "../images/diplome1.png";
 import diplome2 from "../images/diplome2.png";
 import diplome3 from "../images/diplome3.png";
@@ -139,8 +139,8 @@ const Profile2 = (fullpageApi) => {
                    
                 <div className="profile-bottom">
                     <p className="profile-accroche">Actuellement à la recherche d'une entreprise, afin de réaliser une alternance de 16 mois.</p>
-                    <p className="profile-accroche link"><a href="#">PDF - programme de l'alternance [Développeur d'applications] BAC+3</a></p>
-                    <div className="profile-cv">Télécharger mon CV</div>
+                    <p className="profile-accroche link"><a href="/programme_alternance.pdf" target="_blank">PDF - programme de l'alternance [Développeur d'applications] BAC+3</a></p>
+                    <a href="/cv-charles.pdf" target="_blank" className="profile-cv">Télécharger mon CV</a>
                     <div className={boxToogle + " box"}>
                         <div onClick={() => toogling()} className=" diplomes-btn-right  arrow up"></div>
                     </div>

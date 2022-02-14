@@ -31,7 +31,6 @@ const Fullpage = () => {
       }
   }
 
-
 return (  
   <div>
     <Header />
